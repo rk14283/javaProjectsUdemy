@@ -2,19 +2,24 @@ public class Main {
     public static void main(String[] args) {
         int number = 4;
         int finishNumber =20;
+        int evenCount = 0;
+        int oddCount = 0;
         while(number<=finishNumber){
             number++;
-            //he uses continue, but output is the same
 
-/*            if (isEven(number)==true){
-                System.out.println("Even number " + number);
-            }
-            */
+
             if (!isEven(number)){
+                oddCount++;
                 continue;
             }
-            System.out.println("Even number " + number);
+            System.out.println(number);
+            evenCount++;
+            if (evenCount>=5){
+                break;
+            }
         }
+        System.out.println("Total odd numbers found = " + oddCount);
+        System.out.println("Total even numbers found = "+ evenCount);
     }
     public static boolean isEven(int number){
         boolean isEven = false;
