@@ -1,7 +1,18 @@
 public class Main {
     public static void main(String[] args) {
+
+       // BankAccount bobsAccount = new BankAccount("12345", 5000.00,"Bob Brown", "bob@outlook.com", "(091)1234567");//we are calling constructor here
+       //Both constructors are called
+        //Default is making a call to the constructor we made
         BankAccount bobsAccount = new BankAccount();
+        System.out.println(bobsAccount.getAccountNumber());
+        System.out.println(bobsAccount.getBalance());
+      //  System.out.println(bobsAccount.getCustomerName());
+       // System.out.println(bobsAccount.getCustomerEmail());
+       // System.out.println(bobsAccount.getCustomerPhone());
+
 //Writing all this data is very tedious and so for that we have constructors
+     /*//we replace all this with one statement
         bobsAccount.setAccountNumber("12345");
         bobsAccount.setCustomerName("Bob Brown");
         bobsAccount.setCustomerEmail("obob@gmail.com");
@@ -11,6 +22,12 @@ public class Main {
         bobsAccount.setWithdrawMoney(3000);
         bobsAccount.setDepositMoney(23.5);
         bobsAccount.setWithdrawMoney(23.2);// very long output $0.3000000000000007
+        /*
+      */
+        BankAccount timsAccount = new BankAccount("Tim", "tm@gmail.com", "12345");
+        //default number for account number 9999 is printed
+        System.out.println("Account Number " + timsAccount.getAccountNumber() + " name " + timsAccount.getCustomerName());
+
     }
 }
 
@@ -39,4 +56,5 @@ public class Main {
 //In addition, you'll have two behavioural methods, for depositing funds, and withdrawing funds
 //In addition to this class, you'll set up a Main class, with a main method, that creates at least on instance
 //of  the Bank Account class, and simulates depositing and withdrawing money from the account.
+
 

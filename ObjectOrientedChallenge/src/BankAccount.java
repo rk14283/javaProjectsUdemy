@@ -10,6 +10,33 @@ public class BankAccount {
 
         System.out.println("Deposit of $" +depositAmount + " made. New balance is $" + balance);
     }
+    //Constructor name should be same as class
+    //It should have no return type
+    public BankAccount(){
+        //this is the first line to be called
+        this("56789", 2.59, "Default name", "Default address", "Defualt phone");
+        System.out.println("Empty constructor called");
+    }
+    public BankAccount(String accountNumber, double balance,
+                       String customerName, String customerEmail, String customerPhone){
+        System.out.println("Account constructor with parameters called");
+        this.accountNumber = accountNumber;  //better to use this, so you know values are initialized
+        //setAccountNumber(accountNumber); //we can use set instead of this but there are conflicting opinions
+        this.balance = balance;
+        this.customerName = customerName;
+        customerEmail = customerEmail;
+        customerPhone = customerPhone;
+    }
+
+    public BankAccount(String customerName, String customerEmail, String customerPhone) {
+        this("999999", 100.55, customerName,customerEmail,customerPhone);
+      /*
+      this.customerName = customerName;
+        this.customerEmail = customerEmail;
+        this.customerPhone = customerPhone;
+
+       */
+    }
 
     public void setWithdrawMoney(double withdrawalAmount){
         if(balance-withdrawalAmount<0)
@@ -27,6 +54,9 @@ public class BankAccount {
 
     public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
+    }
+    public double getBalance(){
+        return balance;
     }
 
     public void setBalance(double balance) {
