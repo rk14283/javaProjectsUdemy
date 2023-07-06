@@ -20,7 +20,7 @@ public class Calculator {
         this.secondNumber = secondNumber;
     }
     public double getAdditionResult() {
-        return firstNumber+secondNumber;;
+        return firstNumber+secondNumber;
     }
 
 
