@@ -11,6 +11,11 @@ public class Main {
         doAnimalStuff(yorkie,"fast");
         Dog retriever = new Dog("Labrador Retriever", 65, "Floppy", "Swimmer");
         doAnimalStuff(retriever, "slow");
+        Dog wolf = new Dog("Wolf", 40);
+        doAnimalStuff(wolf, "slow");
+
+        Fish goldie = new Fish("Goldfish", 0.25,2, 3);
+        doAnimalStuff(goldie,"fast");
     }
     //it is static because we are calling it from the main method 
     public static void doAnimalStuff(Animal animal, String speed){
