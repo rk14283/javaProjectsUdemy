@@ -6,6 +6,7 @@ import java.time.format.DateTimeParseException;
 import java.time.LocalDate;
 
 public class Worker {
+    //this was basically all correct except protected
     private String name;
     private String birthDate;
 
@@ -21,22 +22,17 @@ public class Worker {
         this.name = name;
         this.birthDate = birthDate;
     }
-    public int getAge(){
-        int age = 0;
-
-       // SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy");
-        try {
-            LocalDate dob = LocalDate.parse(birthDate);
-            LocalDate currentDate = LocalDate.now();
-            Period period = Period.between(dob, currentDate);
-            age = period.getYears();
-
-        } catch (DateTimeParseException e) {
-            age = 0;
-        }
-        return age;
-
-
+    public int getAge() {
+        int currentYear = 2025;
+        int birthYear = Integer.parseInt(birthDate.substring(6));
+        return (currentYear - birthYear);
+    }
+    
+    public double collectPay(){
+        return 0.0; 
+    }
+    public void terminate(String endDate){
+        this.endDate = endDate;
     }
     @Override
     public String toString() {
@@ -48,3 +44,21 @@ public class Worker {
     }
 
 }
+
+
+/* My code
+    int age = 0;
+
+// SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy");
+        try {
+                LocalDate dob = LocalDate.parse(birthDate);
+                LocalDate currentDate = LocalDate.now();
+                Period period = Period.between(dob, currentDate);
+                age = period.getYears();
+
+                } catch (DateTimeParseException e) {
+                age = 0;
+                }
+                return age;
+
+ */
