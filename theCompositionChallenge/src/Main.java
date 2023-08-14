@@ -1,6 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        Kitchen FirstKitchen = new Kitchen();
+  /*
+        FirstKitchen.getDishWasher().setHasWorkToDo(true);
+        FirstKitchen.getIceBox().setHasWorkToDo(true);
+        FirstKitchen.getBrewMaster().setHasWorkToDo(true);
+        FirstKitchen.getDishWasher().doDishes();;
+        FirstKitchen.getIceBox().orderFood();
+        FirstKitchen.getBrewMaster().brewCoffee();
+
+
+         */
+
+        FirstKitchen.setKitchenState(true, false, true);
+        FirstKitchen.doKitchenWork();
     }
 }
 
